@@ -10,16 +10,24 @@ You need to create two contracts using cosmwasm:
   - User should only see his personal details when queried.
   - User can update the personal details and should be approved by HR team to get reflected.
 - Approval Contract :
+
   - For Leave approval based on the employee leave request , Give feedback to employees.
   - Only Admin can approve leaves and provide feedback
   - Non Admin should not have any access to the approval and feedback data.
   - Admin can only post the announcement which can be viewed by any of the employees.
 
+### Consider
+
+- Approval contract can be made to approve all the request automatically based on the leave request and employee id.
+- Approval contract should keep track of leave request ids to avoid redundant leave request.
+- Once leave request raised employee leave balance should be decreased based on the approval status.`
+
 # Note
 
-Approval contract can be made to approve all the request automatically based on the leave request and employee id.
-Approval contract should keep track of leave request ids to avoid redundant leave request.
-Once leave request raised employee leave balance should be decreased based on the approval status.
+- For storage you must use cosmwasm native storage [storage-puls](https://github.com/CosmWasm/cw-storage-plus).
+- Contract should follow all the necessary COSMWASM guidelines while implementing.
+- Contract Should not panic at any point - Error handling should be made with proper error messages.
+- All the functionality must be covered in unit test cases and code coverage should be more than 80%.
 
 Flow Example
 
