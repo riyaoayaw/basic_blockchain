@@ -1,4 +1,4 @@
-# riya_evaluation
+# technical Assessment II
 This fork repository is used for submission of Technical Assessment II which includes creating a simple blockchain using C++
 
 The source code is contained in the filed "blockchain.cpp" placed inside the Riya folder.
